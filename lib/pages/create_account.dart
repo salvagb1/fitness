@@ -1,3 +1,4 @@
+import 'package:fitness/pages/completeprofile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -150,7 +151,11 @@ class _CreateAccountState extends State<CreateAccount> {
                 height: 50,
                 width: MediaQuery.of(context).size.width * 0.9,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const CompleteProfile(),
+                      )),
                   child: const Text(
                     "Register",
                     style: TextStyle(

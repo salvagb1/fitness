@@ -48,7 +48,7 @@ class _HomeState extends State<Home> {
                             borderRadius: BorderRadius.circular(20))),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
