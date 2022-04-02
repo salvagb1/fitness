@@ -145,7 +145,7 @@ class _CreateAccountState extends State<CreateAccount> {
                 ),
               ),
               const SizedBox(
-                height: 60,
+                height: 90,
               ),
               SizedBox(
                 height: 50,
@@ -170,6 +170,38 @@ class _CreateAccountState extends State<CreateAccount> {
                             borderRadius: BorderRadius.circular(20))),
                   ),
                 ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              SizedBox(
+                child: SvgPicture.asset('assets/icons/or.svg'),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.red,
+                    ),
+                    child: SvgPicture.asset('assets/icons/facebook.svg'),
+                  ),
+                  const SizedBox(
+                    width: 30,
+                  ),
+                  Container(
+                    height: 70,
+                    width: 50,
+                    color: Colors.black,
+                    child: SvgPicture.asset('assets/icons/facebook.svg'),
+                  ),
+                ],
               ),
             ],
           )),
