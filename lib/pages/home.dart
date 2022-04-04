@@ -16,6 +16,11 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: const Color(0xff9DCEFF),
       body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Color(0xff9DCEFF), Color(0xff92A3FD)],
+          ),
+        ),
         padding: const EdgeInsets.only(bottom: 40),
         width: MediaQuery.of(context).size.width,
         child: Padding(

@@ -1,3 +1,4 @@
+import 'package:fitness/pages/whatgoal.dart';
 import 'package:flutter/material.dart';
 
 class CompleteProfile extends StatefulWidget {
@@ -8,7 +9,10 @@ class CompleteProfile extends StatefulWidget {
 }
 
 class _CompleteProfileState extends State<CompleteProfile> {
-  var _lista = ['Male', 'Woman'];
+  final _lista = ['Male', 'Woman'];
+  final String _vista = 'Choose Gender';
+
+  get child => null;
 
   @override
   Widget build(BuildContext context) {
@@ -46,11 +50,25 @@ class _CompleteProfileState extends State<CompleteProfile> {
                   const SizedBox(
                     height: 95,
                   ),
+                  DropdownButton(
+                    items: _lista.map((String a) {
+                      return DropdownMenuItem(
+                        value: a,
+                        child: Text(a),
+                      );
+                    }).toList(),
+                    onChanged: (_) {},
+                    hint: Text(_vista),
+                  ),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.8,
                     height: MediaQuery.of(context).size.width * 0.12,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const WhatGoal(),
+                          )),
                       child: const Text(
                         'Next',
                         style: TextStyle(
