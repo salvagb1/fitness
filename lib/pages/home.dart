@@ -19,8 +19,8 @@ class _HomeState extends State<Home> {
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [Color(0xff9DCEFF), Color(0xff92A3FD)],
-            begin: FractionalOffset(0.0, 0.3),
-            end: FractionalOffset(1.0, 0.0),
+            begin: FractionalOffset(0.0, 0.5),
+            end: FractionalOffset(1.0, 0.5),
             stops: [0.0, 0.6],
           ),
         ),
