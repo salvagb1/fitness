@@ -13,6 +13,8 @@ class _CompleteProfileState extends State<CompleteProfile> {
   final _lista = ['Male', 'Woman'];
   final String _vista = 'Choose Gender';
 
+  TextEditingController w_scale = TextEditingController();
+
   get child => null;
 
   @override
@@ -60,6 +62,22 @@ class _CompleteProfileState extends State<CompleteProfile> {
                     }).toList(),
                     onChanged: (_) {},
                     hint: Text(_vista),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  TextField(
+                    controller: w_scale,
+                    decoration: InputDecoration(
+                      prefixIcon: SvgPicture.asset('assets/icons/w_scale.svg'),
+                      hintText: 'Your Weight',
+                      border: const OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 15,
                   ),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.8,
