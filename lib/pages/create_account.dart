@@ -1,4 +1,5 @@
 import 'package:fitness/pages/completeprofile.dart';
+import 'package:fitness/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -232,7 +233,8 @@ class _CreateAccountState extends State<CreateAccount> {
               children: [
                 const Text("Already have an account? "),
                 InkWell(
-                  onTap: () {},
+                  onTap: () => Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Login())),
                   child: const Text(
                     "Login",
                     style: TextStyle(color: Color(0xffC58BF2)),

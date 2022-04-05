@@ -1,3 +1,4 @@
+import 'package:fitness/pages/create_account.dart';
 import 'package:fitness/pages/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -178,7 +179,10 @@ class _LoginState extends State<Login> {
               children: [
                 const Text("Don't have an account yet? "),
                 InkWell(
-                  onTap: () {},
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const CreateAccount())),
                   child: const Text(
                     "Register",
                     style: TextStyle(color: Color(0xffC58BF2)),

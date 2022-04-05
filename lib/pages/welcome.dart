@@ -62,7 +62,7 @@ class _WelcomeState extends State<Welcome> {
                     child: ElevatedButton(
                       onPressed: () {},
                       child: const Text(
-                        'Next',
+                        'To Home',
                         style: TextStyle(
                           color: Colors.white,
                         ),
