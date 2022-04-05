@@ -1,5 +1,6 @@
 import 'package:fitness/pages/whatgoal.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CompleteProfile extends StatefulWidget {
   const CompleteProfile({Key? key}) : super(key: key);
@@ -69,11 +70,17 @@ class _CompleteProfileState extends State<CompleteProfile> {
                           MaterialPageRoute(
                             builder: (context) => const WhatGoal(),
                           )),
-                      child: const Text(
-                        'Next',
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            'Next',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                          SvgPicture.asset('assets/icons/arrow_right.svg'),
+                        ],
                       ),
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(

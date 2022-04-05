@@ -103,11 +103,20 @@ class _LoginState extends State<Login> {
                     MaterialPageRoute(
                       builder: (context) => const Welcome(),
                     )),
-                child: const Text(
-                  "Login",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset('assets/icons/login.svg'),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    const Text(
+                      "Login",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
                 style: ButtonStyle(
                   backgroundColor:
