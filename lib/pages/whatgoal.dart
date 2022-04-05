@@ -1,42 +1,85 @@
+import 'package:fitness/components/whatcomponent.dart';
 import 'package:flutter/material.dart';
 
-class WhatGoal extends StatefulWidget {
+import 'login.dart';
+
+class WhatGoal extends StatelessWidget {
   const WhatGoal({Key? key}) : super(key: key);
 
-  @override
-  State<WhatGoal> createState() => _WhatGoalState();
-}
-
-class _WhatGoalState extends State<WhatGoal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: const [
-            SizedBox(
+          children: [
+            const SizedBox(
+              height: 50,
+            ),
+            const SizedBox(
               child: Text(
                 'What is your goal?',
                 style: TextStyle(
-                  fontSize: 25.0,
+                  fontSize: 28,
                   fontWeight: FontWeight.w900,
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
+              height: 10,
+            ),
+            const SizedBox(
               child: Text(
-                'In will help us to choose a best',
+                'It willhelp us choose a best',
                 style: TextStyle(
-                  color: Colors.black,
+                  fontSize: 15,
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               child: Text(
-                'programa for you',
+                'programfor you',
                 style: TextStyle(
-                  color: Colors.black,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            Container(
+              color: Colors.white,
+              height: 500,
+              child: ListView(
+                padding: const EdgeInsets.all(10),
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  CardWhat('assets/icons/yougoal1.svg'),
+                  CardWhat('assets/icons/yougoal2.svg'),
+                  CardWhat('assets/icons/yougoal3.svg'),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 80,
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.8,
+              height: 55,
+              child: ElevatedButton(
+                onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Login(),
+                    )),
+                child: const Text(
+                  'Confirm',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(const Color(0xff98BAFE)),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25))),
                 ),
               ),
             ),

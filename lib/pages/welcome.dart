@@ -1,28 +1,25 @@
-import 'package:fitness/pages/whatgoal.dart';
 import 'package:flutter/material.dart';
 
-class CompleteProfile extends StatefulWidget {
-  const CompleteProfile({Key? key}) : super(key: key);
+class Welcome extends StatefulWidget {
+  const Welcome({Key? key}) : super(key: key);
 
   @override
-  State<CompleteProfile> createState() => _CompleteProfileState();
+  State<Welcome> createState() => _WelcomeState();
 }
 
-class _CompleteProfileState extends State<CompleteProfile> {
-  final _lista = ['Male', 'Woman'];
-  final String _vista = 'Choose Gender';
-
-  get child => null;
-
+class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(
-              child:
-                  Image(image: AssetImage('assets/images/completeprofile.jpg')),
+              height: 100,
+            ),
+            const SizedBox(
+              child: Image(image: AssetImage('assets/images/welcome.jpg')),
             ),
             Padding(
               padding: const EdgeInsets.all(25),
@@ -31,7 +28,7 @@ class _CompleteProfileState extends State<CompleteProfile> {
                 children: [
                   const SizedBox(
                     child: Text(
-                      "Let's complete your profile",
+                      "Welcome, stefani",
                       style: TextStyle(
                         fontSize: 25.0,
                         fontWeight: FontWeight.w900,
@@ -43,32 +40,27 @@ class _CompleteProfileState extends State<CompleteProfile> {
                   ),
                   const SizedBox(
                     child: Text(
-                      "Improve the quality of your sleep ",
-                      style: TextStyle(fontSize: 16, color: Color(0xff56575a)),
+                      "You are all set now, let's reach your",
+                      style: TextStyle(fontSize: 14, color: Color(0xff56575a)),
                     ),
                   ),
                   const SizedBox(
-                    height: 95,
+                    height: 10,
                   ),
-                  DropdownButton(
-                    items: _lista.map((String a) {
-                      return DropdownMenuItem(
-                        value: a,
-                        child: Text(a),
-                      );
-                    }).toList(),
-                    onChanged: (_) {},
-                    hint: Text(_vista),
+                  const SizedBox(
+                    child: Text(
+                      "goals together with us",
+                      style: TextStyle(fontSize: 14, color: Color(0xff56575a)),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 180,
                   ),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.8,
                     height: 55,
                     child: ElevatedButton(
-                      onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const WhatGoal(),
-                          )),
+                      onPressed: () {},
                       child: const Text(
                         'Next',
                         style: TextStyle(
