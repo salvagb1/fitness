@@ -107,7 +107,7 @@ class _LoginState extends State<Login> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SvgPicture.asset('assets/icons/login.svg'),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     const Text(
