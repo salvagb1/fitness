@@ -69,12 +69,17 @@ class _CompleteProfileState extends State<CompleteProfile> {
                   TextField(
                     controller: w_scale,
                     decoration: InputDecoration(
-                      prefixIcon: SvgPicture.asset('assets/icons/w_scale.svg'),
+                      prefixIcon: SvgPicture.asset(
+                        'assets/icons/w_scale.svg',
+                      ),
                       hintText: 'Your Weight',
                       border: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(20)),
                       ),
                     ),
+                  ),
+                  const SizedBox(
+                    height: 15,
                   ),
                   const SizedBox(
                     height: 15,
@@ -97,7 +102,9 @@ class _CompleteProfileState extends State<CompleteProfile> {
                               color: Colors.white,
                             ),
                           ),
-                          SvgPicture.asset('assets/icons/arrow_right.svg'),
+                          SvgPicture.asset(
+                            'assets/icons/arrow_right.svg',
+                          ),
                         ],
                       ),
                       style: ButtonStyle(
