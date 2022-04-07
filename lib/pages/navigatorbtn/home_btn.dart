@@ -47,7 +47,10 @@ class _HomeBtnState extends State<HomeBtn> {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const NotificationFitness())),
-              icon: SvgPicture.asset('assets/icons/notification3.svg'))
+              icon: SvgPicture.asset(
+                'assets/icons/notification3.svg',
+                width: 25,
+              ))
         ],
       ),
     );
