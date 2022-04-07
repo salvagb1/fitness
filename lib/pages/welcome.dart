@@ -1,3 +1,5 @@
+import 'package:fitness/pages/notification.dart';
+import 'package:fitness/pages/welcome_home.dart';
 import 'package:flutter/material.dart';
 
 class Welcome extends StatefulWidget {
@@ -60,7 +62,10 @@ class _WelcomeState extends State<Welcome> {
                     width: MediaQuery.of(context).size.width * 0.8,
                     height: 55,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const WelcomeHome())),
                       child: const Text(
                         'To Home',
                         style: TextStyle(
