@@ -199,7 +199,7 @@ class _CreateAccountState extends State<CreateAccount> {
                     ),
                     side: const BorderSide(
                       color: Color(0xffADA4A5),
-                      width: 1.5,
+                      width: 1,
                     ),
                     activeColor: const Color(0xff92A3FD),
                     value: _agree,
@@ -221,6 +221,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       "Privacy policy",
                       style: TextStyle(
                         color: Color(0xffADA4A5),
+                        decoration: TextDecoration.underline,
                       ),
                     ),
                   ),
@@ -236,6 +237,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       "Term of Use.",
                       style: TextStyle(
                         color: Color(0xffADA4A5),
+                        decoration: TextDecoration.underline,
                       ),
                     ),
                   ),
