@@ -54,7 +54,7 @@ class _CreateAccountState extends State<CreateAccount> {
             ),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 8),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color.fromARGB(50, 0, 0, 0),
                 borderRadius: BorderRadius.all(
                   Radius.circular(10),
