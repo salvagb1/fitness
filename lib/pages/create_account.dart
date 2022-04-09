@@ -52,13 +52,28 @@ class _CreateAccountState extends State<CreateAccount> {
             const SizedBox(
               height: 20,
             ),
-            TextField(
-              controller: nameController,
-              decoration: InputDecoration(
-                icon: SvgPicture.asset('assets/icons/profile.svg'),
-                hintText: 'First Name',
-                border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(50, 0, 0, 0),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10),
+                ),
+              ),
+              child: Row(
+                children: [
+                  SvgPicture.asset('assets/icons/profile.svg'),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: TextField(
+                      controller: nameController,
+                      decoration: const InputDecoration(
+                        hintText: 'First Name',
+                        border: InputBorder.none,
+                      ),
+                    ),
+                  )
+                ],
               ),
             ),
             const SizedBox(
