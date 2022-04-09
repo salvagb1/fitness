@@ -53,22 +53,27 @@ class _CreateAccountState extends State<CreateAccount> {
               height: 20,
             ),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8),
+              height: 60,
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               decoration: const BoxDecoration(
-                color: Color.fromARGB(50, 0, 0, 0),
+                color: Color(0xffF7F8F8),
                 borderRadius: BorderRadius.all(
-                  Radius.circular(10),
+                  Radius.circular(20),
                 ),
               ),
               child: Row(
                 children: [
-                  SvgPicture.asset('assets/icons/profile.svg'),
-                  const SizedBox(width: 10),
+                  SvgPicture.asset(
+                    'assets/icons/profile.svg',
+                    color: const Color(0xff7B6F72),
+                  ),
+                  const SizedBox(width: 20),
                   Expanded(
                     child: TextField(
                       controller: nameController,
                       decoration: const InputDecoration(
                         hintText: 'First Name',
+                        hintStyle: TextStyle(color: Color(0xffADA4A5)),
                         border: InputBorder.none,
                       ),
                     ),
@@ -79,51 +84,106 @@ class _CreateAccountState extends State<CreateAccount> {
             const SizedBox(
               height: 20,
             ),
-            TextField(
-              controller: lastnameController,
-              decoration: InputDecoration(
-                icon: SvgPicture.asset('assets/icons/profile.svg'),
-                hintText: 'Last Name',
-                border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            TextField(
-              controller: email,
-              decoration: InputDecoration(
-                icon: SvgPicture.asset('assets/icons/message.svg'),
-                hintText: 'Email',
-                border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            TextField(
-              obscureText: _showPassword == false ? true : false,
-              controller: passwordController,
-              decoration: InputDecoration(
-                icon: SvgPicture.asset('assets/icons/lock.svg'),
-                hintText: 'Password',
-                border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
-                suffixIcon: GestureDetector(
-                  child: Icon(
-                    _showPassword == false
-                        ? Icons.visibility_off
-                        : Icons.visibility,
-                    color: Colors.black,
-                  ),
-                  onTap: () {
-                    setState(() {
-                      _showPassword = !_showPassword;
-                    });
-                  },
+            Container(
+              height: 60,
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              decoration: const BoxDecoration(
+                color: Color(0xffF7F8F8),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(20),
                 ),
+              ),
+              child: Row(children: [
+                SvgPicture.asset(
+                  'assets/icons/profile.svg',
+                  color: const Color(0xff7B6F72),
+                ),
+                const SizedBox(width: 20),
+                Expanded(
+                  child: TextField(
+                    controller: lastnameController,
+                    decoration: const InputDecoration(
+                      hintText: 'Last Name',
+                      hintStyle: TextStyle(color: Color(0xffADA4A5)),
+                      border: InputBorder.none,
+                    ),
+                  ),
+                ),
+              ]),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              height: 60,
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              decoration: const BoxDecoration(
+                color: Color(0xffF7F8F8),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(20),
+                ),
+              ),
+              child: Row(
+                children: [
+                  SvgPicture.asset(
+                    'assets/icons/message.svg',
+                    color: const Color(0xff7B6F72),
+                  ),
+                  const SizedBox(width: 20),
+                  Expanded(
+                    child: TextField(
+                      controller: email,
+                      decoration: const InputDecoration(
+                        hintText: 'Email',
+                        hintStyle: TextStyle(color: Color(0xffADA4A5)),
+                        border: InputBorder.none,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              height: 60,
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              decoration: const BoxDecoration(
+                color: Color(0xffF7F8F8),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(20),
+                ),
+              ),
+              child: Row(
+                children: [
+                  SvgPicture.asset('assets/icons/lock.svg'),
+                  const SizedBox(width: 20),
+                  Expanded(
+                    child: TextField(
+                      obscureText: _showPassword == false ? true : false,
+                      controller: passwordController,
+                      decoration: InputDecoration(
+                        hintText: 'Password',
+                        hintStyle: const TextStyle(color: Color(0xffADA4A5)),
+                        border: InputBorder.none,
+                        suffixIcon: GestureDetector(
+                          child: Icon(
+                            _showPassword == false
+                                ? Icons.visibility_off_outlined
+                                : Icons.visibility_outlined,
+                            color: const Color(0xffADA4A5),
+                          ),
+                          onTap: () {
+                            setState(() {
+                              _showPassword = !_showPassword;
+                            });
+                          },
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
             DefaultTextStyle(
@@ -134,6 +194,14 @@ class _CreateAccountState extends State<CreateAccount> {
                 crossAxisAlignment: WrapCrossAlignment.center,
                 children: <Widget>[
                   Checkbox(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    side: const BorderSide(
+                      color: Color(0xffADA4A5),
+                      width: 1.5,
+                    ),
+                    activeColor: const Color(0xff92A3FD),
                     value: _agree,
                     onChanged: (a) {
                       setState(() {
@@ -141,20 +209,34 @@ class _CreateAccountState extends State<CreateAccount> {
                       });
                     },
                   ),
-                  const Text("By continuing yopu accept our "),
+                  const Text(
+                    "By continuing yopu accept our ",
+                    style: TextStyle(
+                      color: Color(0xffADA4A5),
+                    ),
+                  ),
                   InkWell(
                     onTap: () {},
                     child: const Text(
                       "Privacy policy",
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(
+                        color: Color(0xffADA4A5),
+                      ),
                     ),
                   ),
-                  const Text(" and "),
+                  const Text(
+                    " and ",
+                    style: TextStyle(
+                      color: Color(0xffADA4A5),
+                    ),
+                  ),
                   InkWell(
                     onTap: () {},
                     child: const Text(
                       "Term of Use.",
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(
+                        color: Color(0xffADA4A5),
+                      ),
                     ),
                   ),
                 ],

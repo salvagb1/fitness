@@ -1,5 +1,6 @@
 import 'package:fitness/pages/create_account.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class GetStarted4 extends StatefulWidget {
   const GetStarted4({Key? key}) : super(key: key);
@@ -59,9 +60,7 @@ class _GetStarted4State extends State<GetStarted4> {
                           MaterialPageRoute(
                             builder: (context) => const CreateAccount(),
                           )),
-                      child: const Icon(
-                        Icons.arrow_right,
-                      ),
+                      child: SvgPicture.asset('assets/icons/arrow_right.svg'),
                     ),
                   ),
                 ],

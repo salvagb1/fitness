@@ -1,5 +1,6 @@
 import 'package:fitness/pages/get_started4.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class GetStarted3 extends StatefulWidget {
   const GetStarted3({Key? key}) : super(key: key);
@@ -59,9 +60,7 @@ class _GetStarted3State extends State<GetStarted3> {
                           MaterialPageRoute(
                             builder: (context) => const GetStarted4(),
                           )),
-                      child: const Icon(
-                        Icons.arrow_right,
-                      ),
+                      child: SvgPicture.asset('assets/icons/arrow_right.svg'),
                     ),
                   ),
                 ],
