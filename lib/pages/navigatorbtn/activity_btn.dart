@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class ActivityBtn extends StatefulWidget {
-  ActivityBtn({Key? key}) : super(key: key);
+  const ActivityBtn({Key? key}) : super(key: key);
 
   @override
   State<ActivityBtn> createState() => _ActivityBtnState();
@@ -18,7 +17,7 @@ class _ActivityBtnState extends State<ActivityBtn> {
             children: const [
               SizedBox(
                 child: Text(
-                  'Welcome Back,',
+                  '2',
                   style: TextStyle(
                     color: Color(0xffADA4A5),
                     fontSize: 15.5,
@@ -30,7 +29,7 @@ class _ActivityBtnState extends State<ActivityBtn> {
               ),
               SizedBox(
                 child: Text(
-                  'Stefani Wong',
+                  'Activity',
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w900,
@@ -40,11 +39,6 @@ class _ActivityBtnState extends State<ActivityBtn> {
               )
             ]),
         automaticallyImplyLeading: false,
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset('assets/icons/notification3.svg'))
-        ],
       ),
     );
   }

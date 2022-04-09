@@ -1,4 +1,3 @@
-import 'package:fitness/pages/notification.dart';
 import 'package:fitness/pages/welcome_home.dart';
 import 'package:flutter/material.dart';
 

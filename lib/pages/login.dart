@@ -14,7 +14,7 @@ class _LoginState extends State<Login> {
   TextEditingController email = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   bool _showPassword = false;
-  bool _agree = false;
+  final bool _agree = false;
 
   @override
   Widget build(BuildContext context) {

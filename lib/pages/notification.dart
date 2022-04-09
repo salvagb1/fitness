@@ -1,4 +1,4 @@
-import 'package:fitness/pages/welcome.dart';
+import 'package:fitness/pages/activity_tracker.dart';
 import 'package:fitness/pages/welcome_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -39,7 +39,10 @@ class _NotificationFitnessState extends State<NotificationFitness> {
         child: Column(
           children: [
             InkWell(
-              onTap: () {},
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ActivityTracker())),
               child: Row(
                 children: [
                   const CircleAvatar(

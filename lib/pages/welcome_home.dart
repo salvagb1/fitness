@@ -17,10 +17,10 @@ class _WelcomeHomeState extends State<WelcomeHome> {
   int currentTab = 0;
   final List<Widget> screens = [
     const HomeBtn(),
-    ActivityBtn(),
-    SearchBtn(),
-    CameraBtn(),
-    ProfileBtn(),
+    const ActivityBtn(),
+    const SearchBtn(),
+    const CameraBtn(),
+    const ProfileBtn(),
   ];
   final PageStorageBucket bucket = PageStorageBucket();
   Widget currentScreen = const HomeBtn();
@@ -67,7 +67,7 @@ class _WelcomeHomeState extends State<WelcomeHome> {
                     minWidth: 40,
                     onPressed: () {
                       setState(() {
-                        currentScreen = const HomeBtn();
+                        currentScreen = const ActivityBtn();
                         currentTab = 1;
                       });
                     },
@@ -87,7 +87,7 @@ class _WelcomeHomeState extends State<WelcomeHome> {
                     minWidth: 50,
                     onPressed: () {
                       setState(() {
-                        currentScreen = const HomeBtn();
+                        currentScreen = const CameraBtn();
                         currentTab = 2;
                       });
                     },
@@ -102,7 +102,7 @@ class _WelcomeHomeState extends State<WelcomeHome> {
                     minWidth: 50,
                     onPressed: () {
                       setState(() {
-                        currentScreen = const HomeBtn();
+                        currentScreen = const ProfileBtn();
                         currentTab = 3;
                       });
                     },

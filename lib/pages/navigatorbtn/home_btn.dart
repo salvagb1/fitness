@@ -43,14 +43,15 @@ class _HomeBtnState extends State<HomeBtn> {
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const NotificationFitness())),
-              icon: SvgPicture.asset(
-                'assets/icons/notification3.svg',
-                width: 25,
-              ))
+            onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const NotificationFitness())),
+            icon: SvgPicture.asset(
+              'assets/icons/notification3.svg',
+              width: 25,
+            ),
+          ),
         ],
       ),
     );

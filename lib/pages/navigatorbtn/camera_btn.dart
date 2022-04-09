@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class CameraBtn extends StatefulWidget {
-  CameraBtn({Key? key}) : super(key: key);
+  const CameraBtn({Key? key}) : super(key: key);
 
   @override
   State<CameraBtn> createState() => _CameraBtnState();
@@ -18,7 +17,7 @@ class _CameraBtnState extends State<CameraBtn> {
             children: const [
               SizedBox(
                 child: Text(
-                  'Welcome Back,',
+                  '3',
                   style: TextStyle(
                     color: Color(0xffADA4A5),
                     fontSize: 15.5,
@@ -30,7 +29,7 @@ class _CameraBtnState extends State<CameraBtn> {
               ),
               SizedBox(
                 child: Text(
-                  'Stefani Wong',
+                  'Camera',
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w900,
@@ -40,11 +39,6 @@ class _CameraBtnState extends State<CameraBtn> {
               )
             ]),
         automaticallyImplyLeading: false,
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset('assets/icons/notification3.svg'))
-        ],
       ),
     );
   }

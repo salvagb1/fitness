@@ -10,10 +10,9 @@ class CompleteProfile extends StatefulWidget {
 }
 
 class _CompleteProfileState extends State<CompleteProfile> {
+  TextEditingController w_scale = TextEditingController();
   final _lista = ['Male', 'Woman'];
   final String _vista = 'Choose Gender';
-
-  TextEditingController w_scale = TextEditingController();
 
   get child => null;
 
@@ -69,7 +68,7 @@ class _CompleteProfileState extends State<CompleteProfile> {
                   TextField(
                     controller: w_scale,
                     decoration: InputDecoration(
-                      prefixIcon: SvgPicture.asset(
+                      icon: SvgPicture.asset(
                         'assets/icons/w_scale.svg',
                       ),
                       hintText: 'Your Weight',
@@ -79,10 +78,7 @@ class _CompleteProfileState extends State<CompleteProfile> {
                     ),
                   ),
                   const SizedBox(
-                    height: 15,
-                  ),
-                  const SizedBox(
-                    height: 15,
+                    height: 30,
                   ),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.8,

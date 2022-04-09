@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
-                child: SvgPicture.asset('assets/icons/fitness2.svg'),
+                child: SvgPicture.asset('assets/icons/fitness.svg'),
               ),
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.8,

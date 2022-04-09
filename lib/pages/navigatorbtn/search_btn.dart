@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class SearchBtn extends StatefulWidget {
-  SearchBtn({Key? key}) : super(key: key);
+  const SearchBtn({Key? key}) : super(key: key);
 
   @override
   State<SearchBtn> createState() => _SearchBtnState();
@@ -30,7 +29,7 @@ class _SearchBtnState extends State<SearchBtn> {
               ),
               SizedBox(
                 child: Text(
-                  'Stefani Wong',
+                  'Search',
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w900,
@@ -40,11 +39,6 @@ class _SearchBtnState extends State<SearchBtn> {
               )
             ]),
         automaticallyImplyLeading: false,
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset('assets/icons/notification3.svg'))
-        ],
       ),
     );
   }
