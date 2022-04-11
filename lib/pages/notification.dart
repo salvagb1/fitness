@@ -1,7 +1,45 @@
-import 'package:fitness/pages/activity_tracker.dart';
 import 'package:fitness/pages/welcome_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+List<Map<String, dynamic>> examples = [
+  {
+    'title': "Hey, it's time forlunch",
+    'photo': 'assets/images/Ellipse1.jpg',
+    'description': 'About 1 minutes ago',
+    'more': 'assets/icons/more_vertical/svg'
+  },
+  {
+    'title': "Hey, it's time forlunch",
+    'photo': 'assets/images/Ellipse1.jpg',
+    'description': 'About 1 minutes ago',
+    'more': 'assets/icons/more_vertical/svg'
+  },
+  {
+    'title': "Hey, it's time forlunch",
+    'photo': 'assets/images/Ellipse1.jpg',
+    'description': 'About 1 minutes ago',
+    'more': 'assets/icons/more_vertical/svg'
+  },
+  {
+    'title': "Hey, it's time forlunch",
+    'photo': 'assets/images/Ellipse1.jpg',
+    'description': 'About 1 minutes ago',
+    'more': 'assets/icons/more_vertical/svg'
+  },
+  {
+    'title': "Hey, it's time forlunch",
+    'photo': 'assets/images/Ellipse1.jpg',
+    'description': 'About 1 minutes ago',
+    'more': 'assets/icons/more_vertical/svg'
+  },
+  {
+    'title': "Hey, it's time forlunch",
+    'photo': 'assets/images/Ellipse1.jpg',
+    'description': 'About 1 minutes ago',
+    'more': 'assets/icons/more_vertical/svg'
+  },
+];
 
 class NotificationFitness extends StatefulWidget {
   const NotificationFitness({Key? key}) : super(key: key);
@@ -34,20 +72,16 @@ class _NotificationFitnessState extends State<NotificationFitness> {
         ],
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            InkWell(
-              onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ActivityTracker())),
-              child: Row(
+      body: ListView.builder(
+        itemCount: examples.length,
+        itemBuilder: (context, index) {
+          return Column(
+            children: [
+              Row(
                 children: [
                   const CircleAvatar(
                       backgroundImage:
-                          AssetImage('assets/images/Ellipse1.jpg')),
+                          AssetImage('assets/images/Ellipse5.jpg')),
                   const SizedBox(
                     width: 10,
                   ),
@@ -56,12 +90,12 @@ class _NotificationFitnessState extends State<NotificationFitness> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text(
-                          "Hey, it's time forlunch",
+                          "Ups, You have missed your Lowerbo...",
                         ),
                         SizedBox(
                           height: 10,
                         ),
-                        Text('About 1 minutes ago'),
+                        Text('3 April'),
                       ],
                     ),
                   ),
@@ -69,171 +103,16 @@ class _NotificationFitnessState extends State<NotificationFitness> {
                       onPressed: () {}, icon: const Icon(Icons.more_vert))
                 ],
               ),
-            ),
-            const Divider(
-              color: Color(0xffDDDADA),
-              thickness: 2,
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            Row(
-              children: [
-                const CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/Ellipse2.jpg')),
-                const SizedBox(
-                  width: 10,
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text(
-                        "Don’t miss your lowerbody workout",
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text('About 3 hours ago'),
-                    ],
-                  ),
-                ),
-                IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
-              ],
-            ),
-            const Divider(
-              color: Color(0xffDDDADA),
-              thickness: 2,
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            Row(
-              children: [
-                const CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/Ellipse3.jpg')),
-                const SizedBox(
-                  width: 10,
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text(
-                        "Hey, let’s add some meals for your b..",
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text('About 3 hours ago'),
-                    ],
-                  ),
-                ),
-                IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
-              ],
-            ),
-            const Divider(
-              color: Color(0xffDDDADA),
-              thickness: 2,
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            Row(
-              children: [
-                const CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/Ellipse4.jpg')),
-                const SizedBox(
-                  width: 10,
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text(
-                        "Congratulations, You have finished A..",
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text('29 May'),
-                    ],
-                  ),
-                ),
-                IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
-              ],
-            ),
-            const Divider(
-              color: Color(0xffDDDADA),
-              thickness: 2,
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            Row(
-              children: [
-                const CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/Ellipse6.jpg')),
-                const SizedBox(
-                  width: 10,
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text(
-                        "Hey, it's time forlunch",
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text('8 April'),
-                    ],
-                  ),
-                ),
-                IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
-              ],
-            ),
-            const Divider(
-              color: Color(0xffDDDADA),
-              thickness: 2,
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            Row(
-              children: [
-                const CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/Ellipse5.jpg')),
-                const SizedBox(
-                  width: 10,
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text(
-                        "Ups, You have missed your Lowerbo...",
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text('3 April'),
-                    ],
-                  ),
-                ),
-                IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
-              ],
-            ),
-            const Divider(
-              color: Color(0xffDDDADA),
-              thickness: 2,
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-          ],
-        ),
+              const Divider(
+                color: Color(0xffDDDADA),
+                thickness: 2,
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+            ],
+          );
+        },
       ),
     );
   }

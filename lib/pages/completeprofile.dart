@@ -15,7 +15,6 @@ class _CompleteProfileState extends State<CompleteProfile> {
   TextEditingController your_height = TextEditingController();
 
   final _lista = ['Male', 'Woman'];
-  final String _vista = 'Choose Gender';
 
   get child => null;
 
@@ -55,15 +54,46 @@ class _CompleteProfileState extends State<CompleteProfile> {
                   const SizedBox(
                     height: 30,
                   ),
-                  DropdownButton(
-                    items: _lista.map((String a) {
-                      return DropdownMenuItem(
-                        value: a,
-                        child: Text(a),
-                      );
-                    }).toList(),
-                    onChanged: (_) {},
-                    hint: Text(_vista),
+                  Container(
+                    height: 60,
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    decoration: const BoxDecoration(
+                      color: Color(0xffF7F8F8),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(20),
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/icons/calendar.svg',
+                          color: const Color(0xff7B6F72),
+                        ),
+                        const SizedBox(
+                          width: 20,
+                        ),
+                        Expanded(
+                          child: DropdownButton(
+                            items: _lista.map((String a) {
+                              return DropdownMenuItem(
+                                value: a,
+                                child: Text(a),
+                              );
+                            }).toList(),
+                            onChanged: (_) {},
+                            hint: const Text(
+                              'Choose Gender',
+                              style: TextStyle(
+                                color: Color(0xffADA4A5),
+                              ),
+                            ),
+                            isExpanded: true,
+                            icon: SvgPicture.asset('assets/icons/dropdown.svg'),
+                            underline: const SizedBox(),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 10,
@@ -100,38 +130,6 @@ class _CompleteProfileState extends State<CompleteProfile> {
                   const SizedBox(
                     height: 10,
                   ),
-                  Container(
-                    height: 60,
-                    padding: const EdgeInsets.symmetric(horizontal: 15),
-                    decoration: const BoxDecoration(
-                      color: Color(0xffF7F8F8),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(20),
-                      ),
-                    ),
-                    child: Row(
-                      children: [
-                        SvgPicture.asset(
-                          'assets/icons/w_scale.svg',
-                          color: const Color(0xff7B6F72),
-                        ),
-                        const SizedBox(width: 20),
-                        Expanded(
-                          child: TextField(
-                            controller: w_scale,
-                            decoration: const InputDecoration(
-                              hintText: 'Your Weight',
-                              hintStyle: TextStyle(color: Color(0xffADA4A5)),
-                              border: InputBorder.none,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
                   Row(
                     children: [
                       Expanded(
@@ -147,10 +145,23 @@ class _CompleteProfileState extends State<CompleteProfile> {
                           child: Row(
                             children: [
                               SvgPicture.asset(
-                                'assets/icons/swap.svg',
+                                'assets/icons/w_scale.svg',
                                 color: const Color(0xff7B6F72),
                               ),
-                              Expanded(child: TextField())
+                              const SizedBox(
+                                width: 20,
+                              ),
+                              Expanded(
+                                child: TextField(
+                                  controller: w_scale,
+                                  decoration: const InputDecoration(
+                                    hintText: 'Your Weight',
+                                    hintStyle:
+                                        TextStyle(color: Color(0xffADA4A5)),
+                                    border: InputBorder.none,
+                                  ),
+                                ),
+                              )
                             ],
                           ),
                         ),
@@ -174,6 +185,70 @@ class _CompleteProfileState extends State<CompleteProfile> {
                         child: const Center(
                           child: Text(
                             'KG',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          height: 60,
+                          padding: const EdgeInsets.symmetric(horizontal: 15),
+                          decoration: const BoxDecoration(
+                            color: Color(0xffF7F8F8),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(20),
+                            ),
+                          ),
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                'assets/icons/swap.svg',
+                                color: const Color(0xff7B6F72),
+                              ),
+                              const SizedBox(
+                                width: 20,
+                              ),
+                              Expanded(
+                                child: TextField(
+                                  controller: your_height,
+                                  decoration: const InputDecoration(
+                                    hintText: 'Your Height',
+                                    hintStyle:
+                                        TextStyle(color: Color(0xffADA4A5)),
+                                    border: InputBorder.none,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(),
+                        height: 60,
+                        width: 60,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          gradient: const LinearGradient(
+                            colors: [
+                              Color(0xffEEA4CE),
+                              Color(0xffC58BF2),
+                            ],
+                          ),
+                        ),
+                        child: const Center(
+                          child: Text(
+                            'CM',
                             style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ),

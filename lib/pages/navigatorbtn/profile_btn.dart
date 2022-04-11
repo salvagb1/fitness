@@ -210,7 +210,7 @@ class _ProfileBtnState extends State<ProfileBtn> {
                 borderRadius: BorderRadius.circular(15),
                 boxShadow: const <BoxShadow>[
                   BoxShadow(
-                    color: Colors.black38,
+                    color: Color(0xffF7F8F8),
                     blurRadius: 10.0,
                   ),
                 ],
@@ -321,7 +321,7 @@ class _ProfileBtnState extends State<ProfileBtn> {
                 borderRadius: BorderRadius.circular(15),
                 boxShadow: const <BoxShadow>[
                   BoxShadow(
-                    color: Colors.black38,
+                    color: Color(0xffF7F8F8),
                     blurRadius: 10.0,
                   ),
                 ],
@@ -373,7 +373,7 @@ class _ProfileBtnState extends State<ProfileBtn> {
                 borderRadius: BorderRadius.circular(15),
                 boxShadow: const <BoxShadow>[
                   BoxShadow(
-                    color: Colors.black38,
+                    color: Color(0xffF7F8F8),
                     blurRadius: 10.0,
                   ),
                 ],

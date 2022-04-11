@@ -49,39 +49,79 @@ class _LoginState extends State<Login> {
             const SizedBox(
               height: 20,
             ),
-            TextField(
-              controller: email,
-              decoration: InputDecoration(
-                icon: SvgPicture.asset('assets/icons/message.svg'),
-                hintText: 'Email',
-                border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+            Container(
+              height: 60,
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              decoration: const BoxDecoration(
+                color: Color(0xffF7F8F8),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(20),
+                ),
+              ),
+              child: Row(
+                children: [
+                  SvgPicture.asset(
+                    'assets/icons/message.svg',
+                    color: const Color(0xff7B6F72),
+                  ),
+                  const SizedBox(width: 15),
+                  Expanded(
+                    child: TextField(
+                      controller: email,
+                      decoration: const InputDecoration(
+                        hintText: 'Email',
+                        hintStyle: TextStyle(color: Color(0xffADA4A5)),
+                        border: InputBorder.none,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
             const SizedBox(
               height: 20,
             ),
-            TextField(
-              obscureText: _showPassword == false ? true : false,
-              controller: passwordController,
-              decoration: InputDecoration(
-                icon: SvgPicture.asset('assets/icons/lock.svg'),
-                hintText: 'Password',
-                border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
-                suffixIcon: GestureDetector(
-                  child: Icon(
-                    _showPassword == false
-                        ? Icons.visibility_off
-                        : Icons.visibility,
-                    color: Colors.black,
-                  ),
-                  onTap: () {
-                    setState(() {
-                      _showPassword = !_showPassword;
-                    });
-                  },
+            Container(
+              height: 60,
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              decoration: const BoxDecoration(
+                color: Color(0xffF7F8F8),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(20),
                 ),
+              ),
+              child: Row(
+                children: [
+                  SvgPicture.asset(
+                    'assets/icons/lock.svg',
+                    color: const Color(0xff7B6F72),
+                  ),
+                  const SizedBox(width: 15),
+                  Expanded(
+                    child: TextField(
+                      obscureText: _showPassword == false ? true : false,
+                      controller: passwordController,
+                      decoration: InputDecoration(
+                        hintText: 'Password',
+                        hintStyle: const TextStyle(color: Color(0xffADA4A5)),
+                        border: InputBorder.none,
+                        suffixIcon: GestureDetector(
+                          child: Icon(
+                            _showPassword == false
+                                ? Icons.visibility_off_outlined
+                                : Icons.visibility_outlined,
+                            color: const Color(0xffADA4A5),
+                          ),
+                          onTap: () {
+                            setState(() {
+                              _showPassword = !_showPassword;
+                            });
+                          },
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
             const SizedBox(
