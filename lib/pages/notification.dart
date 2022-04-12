@@ -1,44 +1,23 @@
+import 'package:fitness/pages/view_notification.dart';
 import 'package:fitness/pages/welcome_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-List<Map<String, dynamic>> examples = [
-  {
-    'title': "Hey, it's time forlunch",
-    'photo': 'assets/images/Ellipse1.jpg',
-    'description': 'About 1 minutes ago',
-    'more': 'assets/icons/more_vertical/svg'
-  },
-  {
-    'title': "Hey, it's time forlunch",
-    'photo': 'assets/images/Ellipse1.jpg',
-    'description': 'About 1 minutes ago',
-    'more': 'assets/icons/more_vertical/svg'
-  },
-  {
-    'title': "Hey, it's time forlunch",
-    'photo': 'assets/images/Ellipse1.jpg',
-    'description': 'About 1 minutes ago',
-    'more': 'assets/icons/more_vertical/svg'
-  },
-  {
-    'title': "Hey, it's time forlunch",
-    'photo': 'assets/images/Ellipse1.jpg',
-    'description': 'About 1 minutes ago',
-    'more': 'assets/icons/more_vertical/svg'
-  },
-  {
-    'title': "Hey, it's time forlunch",
-    'photo': 'assets/images/Ellipse1.jpg',
-    'description': 'About 1 minutes ago',
-    'more': 'assets/icons/more_vertical/svg'
-  },
-  {
-    'title': "Hey, it's time forlunch",
-    'photo': 'assets/images/Ellipse1.jpg',
-    'description': 'About 1 minutes ago',
-    'more': 'assets/icons/more_vertical/svg'
-  },
+List<ActivityPerson> _notifications = [
+  ActivityPerson('assets/images/Ellipse1.jpg', "Hey, it's time for lunch",
+      "About 1 minitus ago"),
+  ActivityPerson('assets/images/Ellipse2.jpg',
+      "Don't miss your lawerbody workout", "About 1 minitus ago"),
+  ActivityPerson('assets/images/Ellipse3.jpg',
+      "Hey, let's some meals for your b...", "About 1 minitus ago"),
+  ActivityPerson(
+      'assets/images/Ellipse4.jpg',
+      "Congratulations, You have finishied aaaaaaaaaaaaaaa",
+      "About 1 minitus ago"),
+  ActivityPerson('assets/images/Ellipse5.jpg', "Hey, it's time for lunch",
+      "About 1 minitus ago"),
+  ActivityPerson('assets/images/Ellipse6.jpg',
+      "Ups, You have missied your Lowerbo...", "About 1 minitus ago"),
 ];
 
 class NotificationFitness extends StatefulWidget {
@@ -73,47 +52,34 @@ class _NotificationFitnessState extends State<NotificationFitness> {
         centerTitle: true,
       ),
       body: ListView.builder(
-        itemCount: examples.length,
+        shrinkWrap: true,
+        itemCount: _notifications.length,
         itemBuilder: (context, index) {
-          return Column(
-            children: [
-              Row(
-                children: [
-                  const CircleAvatar(
-                      backgroundImage:
-                          AssetImage('assets/images/Ellipse5.jpg')),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          "Ups, You have missed your Lowerbo...",
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text('3 April'),
-                      ],
-                    ),
-                  ),
-                  IconButton(
-                      onPressed: () {}, icon: const Icon(Icons.more_vert))
-                ],
-              ),
-              const Divider(
-                color: Color(0xffDDDADA),
-                thickness: 2,
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-            ],
+          return ListTile(
+            onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const ViewNotification())),
+            leading: CircleAvatar(
+              backgroundImage: AssetImage(_notifications[index].photo),
+            ),
+            title: Text(_notifications[index].title),
+            subtitle: Text(_notifications[index].description),
+            trailing: IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.more_vert),
+            ),
           );
         },
       ),
     );
   }
+}
+
+class ActivityPerson {
+  late String photo;
+  late String title;
+  late String description;
+
+  ActivityPerson(this.photo, this.title, this.description);
 }

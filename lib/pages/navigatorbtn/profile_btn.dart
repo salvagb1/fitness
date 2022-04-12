@@ -3,6 +3,25 @@ import 'package:flutter_svg/svg.dart';
 
 import '../welcome_home.dart';
 
+List<AccountActi> _accountacti = [
+  AccountActi(
+    'assets/icons/profile2.svg',
+    "Personal Data",
+  ),
+  AccountActi(
+    'assets/icons/achievement.svg',
+    "Archiviement",
+  ),
+  AccountActi(
+    'assets/icons/graph.svg',
+    "Activity History",
+  ),
+  AccountActi(
+    'assets/icons/workout.svg',
+    "Workout Progress",
+  ),
+];
+
 class ProfileBtn extends StatefulWidget {
   const ProfileBtn({Key? key}) : super(key: key);
 
@@ -216,7 +235,9 @@ class _ProfileBtnState extends State<ProfileBtn> {
                 ],
                 color: Colors.white,
               ),
-              child: Column(
+
+              /** 
+               * Column(
                 children: [
                   Row(
                     children: const [
@@ -311,6 +332,38 @@ class _ProfileBtnState extends State<ProfileBtn> {
                   ),
 
                   //otro
+                ],
+              ),
+               */
+
+              child: Column(
+                children: [
+                  Row(
+                    children: const [
+                      Text(
+                        'Accunt',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w800),
+                      ),
+                    ],
+                  ),
+                  ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: _accountacti.length,
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        onTap: () {},
+                        leading: SvgPicture.asset(
+                          _accountacti[index].photo,
+                          color: const Color(0xff92A3FD),
+                        ),
+                        title: Text(_accountacti[index].title),
+                        trailing: IconButton(
+                            onPressed: () {},
+                            icon: SvgPicture.asset('assets/icons/arrow.svg')),
+                      );
+                    },
+                  ),
                 ],
               ),
             ),
@@ -458,4 +511,24 @@ class _ProfileBtnState extends State<ProfileBtn> {
       ),
     );
   }
+}
+
+class AccountActi {
+  late String photo;
+  late String title;
+
+  AccountActi(
+    this.photo,
+    this.title,
+  );
+}
+
+class OtherActi {
+  late String photo;
+  late String title;
+
+  OtherActi(
+    this.photo,
+    this.title,
+  );
 }
