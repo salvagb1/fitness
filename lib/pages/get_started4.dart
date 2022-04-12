@@ -29,8 +29,8 @@ class _GetStarted4State extends State<GetStarted4> {
               padding: const EdgeInsets.all(25),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(
+                children: const [
+                  SizedBox(
                     child: Text(
                       'Improve Sleep Quality',
                       style: TextStyle(
@@ -39,35 +39,32 @@ class _GetStarted4State extends State<GetStarted4> {
                       ),
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 10,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     child: Text(
                       "Improve the quality of your sleep with us, good quality sleep can bring a good mood in the morning",
                       style: TextStyle(fontSize: 16, color: Color(0xff56575a)),
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 95,
-                  ),
-                  Align(
-                    alignment: Alignment.topRight,
-                    child: FloatingActionButton(
-                      backgroundColor: const Color(0xff98BAFE),
-                      onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const CreateAccount(),
-                          )),
-                      child: SvgPicture.asset('assets/icons/arrow_right.svg'),
-                    ),
                   ),
                 ],
               ),
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color(0xff98BAFE),
+        onPressed: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const CreateAccount(),
+            )),
+        child: SvgPicture.asset('assets/icons/arrow_right.svg'),
       ),
     );
   }

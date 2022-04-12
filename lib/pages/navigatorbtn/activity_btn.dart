@@ -491,6 +491,10 @@ class _ActivityBtnState extends State<ActivityBtn> {
               height: 20,
             ),
             ListView.builder(
+              padding: const EdgeInsets.only(
+                right: 0,
+                left: 0,
+              ),
               shrinkWrap: true,
               itemCount: _notifications.length,
               itemBuilder: (context, index) {

@@ -29,8 +29,8 @@ class _GetStartedState extends State<GetStarted> {
               padding: const EdgeInsets.all(25),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(
+                children: const [
+                  SizedBox(
                     child: Text(
                       'Track Your Goal',
                       style: TextStyle(
@@ -39,34 +39,29 @@ class _GetStartedState extends State<GetStarted> {
                       ),
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 10,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     child: Text(
                       "Don't worry if you have trouble determining your goals, We can help you determine your goals and track your goals",
                       style: TextStyle(fontSize: 16, color: Color(0xff56575a)),
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 115,
-                  ),
-                  Align(
-                    alignment: Alignment.topRight,
-                    child: FloatingActionButton(
-                      backgroundColor: const Color(0xff98BAFE),
-                      onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const GetStarted2())),
-                      child: SvgPicture.asset('assets/icons/arrow_right.svg'),
-                    ),
                   ),
                 ],
               ),
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color(0xff98BAFE),
+        onPressed: () => Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const GetStarted2())),
+        child: SvgPicture.asset('assets/icons/arrow_right.svg'),
       ),
     );
   }

@@ -29,8 +29,8 @@ class _GetStarted3State extends State<GetStarted3> {
               padding: const EdgeInsets.all(25),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(
+                children: const [
+                  SizedBox(
                     child: Text(
                       'Eat Well',
                       style: TextStyle(
@@ -39,35 +39,32 @@ class _GetStarted3State extends State<GetStarted3> {
                       ),
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 10,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     child: Text(
                       "Let's start a healthy lifestyle with us, we can determine your diet every day. healthy eating is fun",
                       style: TextStyle(fontSize: 16, color: Color(0xff56575a)),
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 115,
-                  ),
-                  Align(
-                    alignment: Alignment.topRight,
-                    child: FloatingActionButton(
-                      backgroundColor: const Color(0xff98BAFE),
-                      onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const GetStarted4(),
-                          )),
-                      child: SvgPicture.asset('assets/icons/arrow_right.svg'),
-                    ),
                   ),
                 ],
               ),
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color(0xff98BAFE),
+        onPressed: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const GetStarted4(),
+            )),
+        child: SvgPicture.asset('assets/icons/arrow_right.svg'),
       ),
     );
   }
