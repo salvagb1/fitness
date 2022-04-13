@@ -1,10 +1,10 @@
+import 'package:fitness/components/appbar.dart';
 import 'package:fitness/components/button.dart';
 import 'package:fitness/components/card_gallery.dart';
+import 'package:fitness/pages/comparison.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-import '../welcome_home.dart';
 
 class CameraBtn extends StatefulWidget {
   const CameraBtn({Key? key}) : super(key: key);
@@ -17,25 +17,9 @@ class _CameraBtnState extends State<CameraBtn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-            onPressed: () => Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const WelcomeHome())),
-            icon: SvgPicture.asset('assets/icons/backnavs.svg')),
-        title: const Text(
-          'Progress Photo',
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.w900,
-            fontSize: 23,
-          ),
-        ),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset('assets/icons/detailnavs.svg'))
-        ],
-        centerTitle: true,
+      appBar: const PreferredSize(
+        child: AppBarcom(titletext: 'Progress Photo'),
+        preferredSize: Size.fromHeight(50),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
@@ -52,7 +36,7 @@ class _CameraBtnState extends State<CameraBtn> {
                     blurRadius: 10.0,
                   ),
                 ],
-                color: const Color(0xffE2E7FF),
+                color: const Color(0xffFFC2C2),
               ),
               child: Row(
                 children: [
@@ -154,15 +138,24 @@ class _CameraBtnState extends State<CameraBtn> {
                 color: const Color(0xffE2E7FF),
               ),
               child: Row(
-                children: const [
-                  Expanded(
+                children: [
+                  const Expanded(
                     child: Text(
                       "Compare my photo",
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
                     ),
                   ),
-                  ButtonReu(textbu: 'Compare'),
+                  InkWell(
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ComparasionMonth(),
+                        )),
+                    child: const ButtonReu(
+                      textbu: 'Compare',
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -260,8 +253,10 @@ class _CameraBtnState extends State<CameraBtn> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        heroTag: 'btn 2',
         backgroundColor: const Color(0xffC58BF2),
-        onPressed: () {},
+        onPressed: () => Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const ComparasionMonth())),
         child: SvgPicture.asset(
           'assets/icons/camera.svg',
           color: Colors.white,

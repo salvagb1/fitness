@@ -1,3 +1,4 @@
+import 'package:fitness/pages/welcome_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -9,13 +10,14 @@ class AppBarcom extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       leading: IconButton(
-          onPressed: () {},
+          onPressed: () => Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const WelcomeHome())),
           icon: SvgPicture.asset('assets/icons/backnavs.svg')),
       title: Text(
         titletext,
         style: const TextStyle(
           color: Colors.black,
-          fontSize: 30,
+          fontSize: 20,
           fontWeight: FontWeight.w900,
         ),
       ),
