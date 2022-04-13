@@ -12,7 +12,7 @@ class AppBarcom extends StatelessWidget {
           onPressed: () {},
           icon: SvgPicture.asset('assets/icons/backnavs.svg')),
       title: Text(
-        '$titletext',
+        titletext,
         style: const TextStyle(
           color: Colors.black,
           fontSize: 30,

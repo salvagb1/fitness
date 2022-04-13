@@ -1,6 +1,6 @@
 import 'package:fitness/components/button.dart';
 import 'package:fitness/components/card_gallery.dart';
-import 'package:fitness/pages/comparison.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

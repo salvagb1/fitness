@@ -21,8 +21,8 @@ class ButtonReu extends StatelessWidget {
       ),
       child: Center(
         child: Text(
-          '$textbu',
-          style: TextStyle(color: Colors.white),
+          textbu,
+          style: const TextStyle(color: Colors.white),
         ),
       ),
     );

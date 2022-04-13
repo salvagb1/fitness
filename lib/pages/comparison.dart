@@ -1,4 +1,3 @@
-import 'package:fitness/components/appbar.dart';
 import 'package:flutter/material.dart';
 
 class ComparasionMonth extends StatefulWidget {
@@ -14,7 +13,7 @@ class _ComparasionMonthState extends State<ComparasionMonth> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          children: [Text('hola')],
+          children: const [Text('hola')],
         ),
       ),
     );
