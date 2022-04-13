@@ -34,6 +34,9 @@ class _ComparasionMonthState extends State<ComparasionMonth> {
                   builder: (context) => const ResultFitness(),
                 )),
             child: const FirstButton(titlebu: 'Compare'),
+          ),
+          const SizedBox(
+            height: 20,
           )
         ],
       ),
