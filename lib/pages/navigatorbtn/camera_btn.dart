@@ -1,5 +1,6 @@
 import 'package:fitness/components/button.dart';
 import 'package:fitness/components/card_gallery.dart';
+import 'package:fitness/pages/comparison.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -42,6 +43,37 @@ class _CameraBtnState extends State<CameraBtn> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
+              padding: const EdgeInsets.all(18),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                boxShadow: const <BoxShadow>[
+                  BoxShadow(
+                    color: Color(0xffF7F8F8),
+                    blurRadius: 10.0,
+                  ),
+                ],
+                color: const Color(0xffE2E7FF),
+              ),
+              child: Row(
+                children: [
+                  const Expanded(
+                    child: Text(
+                      "Compare my photo",
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {},
+                    child: const ButtonReu(textbu: 'Compare'),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
@@ -68,7 +100,7 @@ class _CameraBtnState extends State<CameraBtn> {
                         style: TextStyle(fontWeight: FontWeight.w700),
                       ),
                       const SizedBox(
-                        height: 30,
+                        height: 20,
                       ),
                       InkWell(
                         onTap: () {},
@@ -96,7 +128,12 @@ class _CameraBtnState extends State<CameraBtn> {
                     ],
                   ),
                   Column(
-                    children: [Image.asset('assets/images/calendar2.png')],
+                    children: [
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Image.asset('assets/images/calendar2.png')
+                    ],
                   ),
                 ],
               ),
@@ -125,7 +162,7 @@ class _CameraBtnState extends State<CameraBtn> {
                           TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
                     ),
                   ),
-                  ButtonReu(textbu: 'textbu'),
+                  ButtonReu(textbu: 'Compare'),
                 ],
               ),
             ),
