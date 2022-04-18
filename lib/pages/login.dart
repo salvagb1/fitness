@@ -129,7 +129,13 @@ class _LoginState extends State<Login> {
             ),
             InkWell(
               onTap: () {},
-              child: const Text('Forgot your password?'),
+              child: const Text(
+                'Forgot your password?',
+                style: TextStyle(
+                  color: Color(0xffADA4A5),
+                  decoration: TextDecoration.underline,
+                ),
+              ),
             ),
             const SizedBox(
               height: 200,

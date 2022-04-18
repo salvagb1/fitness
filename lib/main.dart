@@ -15,12 +15,13 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: 'Poppins',
         scaffoldBackgroundColor: Colors.white,
         primarySwatch: Colors.blue,
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
           iconTheme: IconThemeData(color: Colors.black),
-          toolbarTextStyle: TextStyle(color: Colors.black),
+          titleTextStyle: TextStyle(color: Colors.black),
           elevation: 0,
         ),
       ),

@@ -45,7 +45,7 @@ class _ActivityBtnState extends State<ActivityBtn> {
         child: Column(
           children: [
             Container(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.all(15),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
                 boxShadow: const <BoxShadow>[
@@ -101,7 +101,7 @@ class _ActivityBtnState extends State<ActivityBtn> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        width: 150,
+                        width: 155,
                         padding: const EdgeInsets.all(15),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
@@ -128,20 +128,26 @@ class _ActivityBtnState extends State<ActivityBtn> {
                                   '8L',
                                   style: TextStyle(
                                     color: Color(0xff92A3FD),
-                                    fontSize: 19,
+                                    fontSize: 16,
                                   ),
                                 ),
                                 SizedBox(
                                   height: 5,
                                 ),
-                                Text('Water Intake'),
+                                Text(
+                                  'Water Intake',
+                                  style: TextStyle(
+                                    color: Color(0xff7B6F72),
+                                    fontSize: 14,
+                                  ),
+                                ),
                               ],
                             ),
                           ],
                         ),
                       ),
                       const SizedBox(
-                        width: 20,
+                        width: 15,
                       ),
                       Container(
                         width: 150,
@@ -171,13 +177,19 @@ class _ActivityBtnState extends State<ActivityBtn> {
                                   '2400',
                                   style: TextStyle(
                                     color: Color(0xff92A3FD),
-                                    fontSize: 19,
+                                    fontSize: 16,
                                   ),
                                 ),
                                 SizedBox(
                                   height: 5,
                                 ),
-                                Text('Foot Steps'),
+                                Text(
+                                  'Foot Steps',
+                                  style: TextStyle(
+                                    color: Color(0xff7B6F72),
+                                    fontSize: 14,
+                                  ),
+                                ),
                               ],
                             ),
                           ],

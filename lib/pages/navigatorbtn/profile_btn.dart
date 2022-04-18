@@ -77,7 +77,13 @@ class _ProfileBtnState extends State<ProfileBtn> {
                       SizedBox(
                         height: 10,
                       ),
-                      Text('Losea fat Program'),
+                      Text(
+                        'Losea fat Program',
+                        style: TextStyle(
+                          color: Color(0xff7B6F72),
+                          fontSize: 14,
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -236,8 +242,7 @@ class _ProfileBtnState extends State<ProfileBtn> {
                 color: Colors.white,
               ),
 
-              /** 
-               * Column(
+              child: Column(
                 children: [
                   Row(
                     children: const [
@@ -334,38 +339,37 @@ class _ProfileBtnState extends State<ProfileBtn> {
                   //otro
                 ],
               ),
-               */
 
-              child: Column(
-                children: [
-                  Row(
-                    children: const [
-                      Text(
-                        'Accunt',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w800),
-                      ),
-                    ],
-                  ),
-                  ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: _accountacti.length,
-                    itemBuilder: (context, index) {
-                      return ListTile(
-                        onTap: () {},
-                        leading: SvgPicture.asset(
-                          _accountacti[index].photo,
-                          color: const Color(0xff92A3FD),
-                        ),
-                        title: Text(_accountacti[index].title),
-                        trailing: IconButton(
-                            onPressed: () {},
-                            icon: SvgPicture.asset('assets/icons/arrow.svg')),
-                      );
-                    },
-                  ),
-                ],
-              ),
+              // child: Column(
+              //   children: [
+              //     Row(
+              //       children: const [
+              //         Text(
+              //           'Accunt',
+              //           style: TextStyle(
+              //               fontSize: 20, fontWeight: FontWeight.w800),
+              //         ),
+              //       ],
+              //     ),
+              //     ListView.builder(
+              //       shrinkWrap: true,
+              //       itemCount: _accountacti.length,
+              //       itemBuilder: (context, index) {
+              //         return ListTile(
+              //           onTap: () {},
+              //           leading: SvgPicture.asset(
+              //             _accountacti[index].photo,
+              //             color: const Color(0xff92A3FD),
+              //           ),
+              //           title: Text(_accountacti[index].title),
+              //           trailing: IconButton(
+              //               onPressed: () {},
+              //               icon: SvgPicture.asset('assets/icons/arrow.svg')),
+              //         );
+              //       },
+              //     ),
+              //   ],
+              // ),
             ),
             const SizedBox(height: 15),
             Container(

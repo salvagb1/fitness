@@ -98,8 +98,8 @@ class _ActivityTrackerState extends State<ActivityTracker> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        width: 150,
-                        padding: const EdgeInsets.all(15),
+                        width: 155,
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           boxShadow: const <BoxShadow>[
@@ -116,7 +116,7 @@ class _ActivityTrackerState extends State<ActivityTracker> {
                               image: AssetImage('assets/images/cupima.jpg'),
                             ),
                             const SizedBox(
-                              width: 10,
+                              width: 5,
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -131,7 +131,7 @@ class _ActivityTrackerState extends State<ActivityTracker> {
                                 SizedBox(
                                   height: 5,
                                 ),
-                                Text('Water Intake'),
+                                Text('Intake'),
                               ],
                             ),
                           ],
@@ -141,7 +141,7 @@ class _ActivityTrackerState extends State<ActivityTracker> {
                         width: 20,
                       ),
                       Container(
-                        width: 150,
+                        width: 155,
                         padding: const EdgeInsets.all(15),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),

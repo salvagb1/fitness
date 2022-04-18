@@ -2,17 +2,30 @@ import 'package:fitness/pages/welcome_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class AppBarcom extends StatelessWidget {
-  const AppBarcom({Key? key, required this.titletext}) : super(key: key);
+class AppBarcom extends StatelessWidget implements PreferredSizeWidget {
+  const AppBarcom({
+    Key? key,
+    required this.titletext,
+    this.toolbarHeight,
+    this.bottom,
+  }) : super(key: key);
   final String titletext;
+  final double? toolbarHeight;
+  final PreferredSizeWidget? bottom;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      toolbarHeight: toolbarHeight,
       leading: IconButton(
-          onPressed: () => Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const WelcomeHome())),
-          icon: SvgPicture.asset('assets/icons/backnavs.svg')),
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const WelcomeHome(),
+          ),
+        ),
+        icon: SvgPicture.asset('assets/icons/backnavs.svg'),
+      ),
       title: Text(
         titletext,
         style: const TextStyle(
@@ -21,12 +34,17 @@ class AppBarcom extends StatelessWidget {
           fontWeight: FontWeight.w900,
         ),
       ),
+      centerTitle: true,
       actions: [
         IconButton(
-            onPressed: () {},
-            icon: SvgPicture.asset('assets/icons/detailnavs.svg'))
+          onPressed: () {},
+          icon: SvgPicture.asset('assets/icons/detailnavs.svg'),
+        )
       ],
-      centerTitle: true,
+      bottom: bottom,
     );
   }
+
+  @override
+  Size get preferredSize => AppBar().preferredSize;
 }
