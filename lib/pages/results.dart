@@ -98,7 +98,7 @@ class _ResultFitnessState extends State<ResultFitness>
                     child: Text('Photo'),
                   ),
                   Tab(
-                    child: Text('Statidtic'),
+                    child: Text('Statistic'),
                   )
                 ],
               ),
