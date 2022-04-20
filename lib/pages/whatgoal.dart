@@ -19,7 +19,7 @@ class WhatGoal extends StatelessWidget {
               child: Text(
                 'What is your goal?',
                 style: TextStyle(
-                  fontSize: 28,
+                  fontSize: 22,
                   fontWeight: FontWeight.w900,
                 ),
               ),
@@ -31,7 +31,7 @@ class WhatGoal extends StatelessWidget {
               child: Text(
                 'It willhelp us choose a best',
                 style: TextStyle(
-                  fontSize: 15,
+                  fontSize: 13,
                 ),
               ),
             ),
@@ -39,7 +39,7 @@ class WhatGoal extends StatelessWidget {
               child: Text(
                 'programfor you',
                 style: TextStyle(
-                  fontSize: 15,
+                  fontSize: 13,
                 ),
               ),
             ),

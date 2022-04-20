@@ -34,7 +34,7 @@ class _GetStartedState extends State<GetStarted> {
                     child: Text(
                       'Track Your Goal',
                       style: TextStyle(
-                        fontSize: 35.0,
+                        fontSize: 25,
                         fontWeight: FontWeight.w900,
                       ),
                     ),
@@ -45,7 +45,10 @@ class _GetStartedState extends State<GetStarted> {
                   SizedBox(
                     child: Text(
                       "Don't worry if you have trouble determining your goals, We can help you determine your goals and track your goals",
-                      style: TextStyle(fontSize: 16, color: Color(0xff56575a)),
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Color(0xff56575a),
+                      ),
                     ),
                   ),
                   SizedBox(

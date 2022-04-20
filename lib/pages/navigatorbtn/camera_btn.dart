@@ -1,4 +1,3 @@
-import 'package:camera/camera.dart';
 import 'package:fitness/components/appbar.dart';
 import 'package:fitness/components/button.dart';
 import 'package:fitness/components/card_gallery.dart';
@@ -7,8 +6,6 @@ import 'package:fitness/pages/mealplanner/mealplanner.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-import '../camera.dart';
 
 class CameraBtn extends StatefulWidget {
   const CameraBtn({Key? key}) : super(key: key);
@@ -280,18 +277,6 @@ class _CameraBtnState extends State<CameraBtn> {
             builder: (context) => const MealPlanner(),
           ),
         ),
-        // onPressed: () async {
-        //   await availableCameras().then(
-        //     (value) => Navigator.push(
-        //       context,
-        //       MaterialPageRoute(
-        //         builder: (context) => CameraPage(
-        //           cameras: value,
-        //         ),
-        //       ),
-        //     ),
-        //   );
-        // },
         child: SvgPicture.asset(
           'assets/icons/camera.svg',
           color: Colors.white,

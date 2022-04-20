@@ -29,26 +29,41 @@ class _GetStarted4State extends State<GetStarted4> {
               padding: const EdgeInsets.all(25),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   SizedBox(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'Improve Sleep',
+                          style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.w900,
+                          ),
+                        ),
+                        Text(
+                          'Quality',
+                          style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.w900,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const SizedBox(
                     child: Text(
-                      'Improve Sleep Quality',
+                      "Improve the quality of your sleep with us, good quality sleep can bring a good mood in the morning",
                       style: TextStyle(
-                        fontSize: 35.0,
-                        fontWeight: FontWeight.w900,
+                        fontSize: 15,
+                        color: Color(0xff56575a),
                       ),
                     ),
                   ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  SizedBox(
-                    child: Text(
-                      "Improve the quality of your sleep with us, good quality sleep can bring a good mood in the morning",
-                      style: TextStyle(fontSize: 16, color: Color(0xff56575a)),
-                    ),
-                  ),
-                  SizedBox(
+                  const SizedBox(
                     height: 95,
                   ),
                 ],

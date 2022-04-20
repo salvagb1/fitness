@@ -34,7 +34,7 @@ class _GetStarted2State extends State<GetStarted2> {
                     child: Text(
                       'Get Burn',
                       style: TextStyle(
-                        fontSize: 35.0,
+                        fontSize: 25,
                         fontWeight: FontWeight.w900,
                       ),
                     ),
@@ -45,7 +45,10 @@ class _GetStarted2State extends State<GetStarted2> {
                   SizedBox(
                     child: Text(
                       "Let’s keep burning, to achive yours goals, it hurts only temporarily, if you give up now you will be in pain forever",
-                      style: TextStyle(fontSize: 16, color: Color(0xff56575a)),
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Color(0xff56575a),
+                      ),
                     ),
                   ),
                   SizedBox(

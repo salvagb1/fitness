@@ -41,9 +41,6 @@ dependencies:
   charts_flutter: ^0.12.0
   syncfusion_flutter_charts: ^20.1.50
   line_chart: ^1.1.11
-  #Para encontrar ubicaiones y camara
-  
-  camera: ^0.9.4+19
 
 
 dev_dependencies:

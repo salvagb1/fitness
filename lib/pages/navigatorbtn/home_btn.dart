@@ -24,7 +24,8 @@ class _HomeBtnState extends State<HomeBtn> {
                   'Welcome Back,',
                   style: TextStyle(
                     color: Color(0xffADA4A5),
-                    fontSize: 15.5,
+                    fontSize: 15,
+                    fontFamily: 'Poppins',
                   ),
                 ),
               ),
@@ -37,7 +38,8 @@ class _HomeBtnState extends State<HomeBtn> {
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w900,
-                    fontSize: 23,
+                    fontSize: 20,
+                    fontFamily: 'Poppins',
                   ),
                 ),
               )

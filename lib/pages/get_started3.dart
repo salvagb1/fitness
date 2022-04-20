@@ -34,7 +34,7 @@ class _GetStarted3State extends State<GetStarted3> {
                     child: Text(
                       'Eat Well',
                       style: TextStyle(
-                        fontSize: 35.0,
+                        fontSize: 25,
                         fontWeight: FontWeight.w900,
                       ),
                     ),
@@ -45,7 +45,10 @@ class _GetStarted3State extends State<GetStarted3> {
                   SizedBox(
                     child: Text(
                       "Let's start a healthy lifestyle with us, we can determine your diet every day. healthy eating is fun",
-                      style: TextStyle(fontSize: 16, color: Color(0xff56575a)),
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Color(0xff56575a),
+                      ),
                     ),
                   ),
                   SizedBox(

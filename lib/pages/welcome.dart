@@ -22,6 +22,9 @@ class _WelcomeState extends State<Welcome> {
             const SizedBox(
               child: Image(image: AssetImage('assets/images/welcome.jpg')),
             ),
+            SizedBox(
+              height: 30,
+            ),
             const SizedBox(
               child: Text(
                 "Welcome, stefani",
@@ -48,9 +51,6 @@ class _WelcomeState extends State<Welcome> {
                 "goals together with us",
                 style: TextStyle(fontSize: 14, color: Color(0xff56575a)),
               ),
-            ),
-            const SizedBox(
-              height: 180,
             ),
             const Expanded(child: SizedBox()),
             SizedBox(

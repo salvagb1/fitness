@@ -45,8 +45,8 @@ class _CreateAccountState extends State<CreateAccount> {
                 'Create an Account',
                 style: TextStyle(
                     color: Colors.black,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 30),
+                    fontWeight: FontWeight.w900,
+                    fontSize: 20),
               ),
             ),
             const SizedBox(

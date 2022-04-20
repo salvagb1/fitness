@@ -37,7 +37,7 @@ class _CompleteProfileState extends State<CompleteProfile> {
                     child: Text(
                       "Let's complete your profile",
                       style: TextStyle(
-                        fontSize: 25.0,
+                        fontSize: 20,
                         fontWeight: FontWeight.w900,
                       ),
                     ),
@@ -47,8 +47,8 @@ class _CompleteProfileState extends State<CompleteProfile> {
                   ),
                   const SizedBox(
                     child: Text(
-                      "Improve the quality of your sleep ",
-                      style: TextStyle(fontSize: 16, color: Color(0xff56575a)),
+                      "It will help us to know more about you!",
+                      style: TextStyle(fontSize: 12, color: Color(0xff56575a)),
                     ),
                   ),
                   const SizedBox(
