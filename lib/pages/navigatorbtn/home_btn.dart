@@ -1,3 +1,4 @@
+import 'package:fitness/components/graph_modal2.dart';
 import 'package:fitness/pages/notification.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -528,6 +529,59 @@ class _HomeBtnState extends State<HomeBtn> {
                     ),
                   ],
                 ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text(
+                    'Average Progress',
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
+                  Text(
+                    'See more',
+                    style: TextStyle(color: Color(0xffADA4A5)),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  Image.asset('assets/images/workout.png'),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          "Salmon Niguiri",
+                          style: TextStyle(fontWeight: FontWeight.w700),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          'Today 7am',
+                          style: TextStyle(
+                            color: Color(0xff7B6F72),
+                            fontSize: 14,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        GraphModal2(),
+                      ],
+                    ),
+                  ),
+                  Image.asset('assets/images/Workout-Btn.png'),
+                ],
               ),
             ],
           ),

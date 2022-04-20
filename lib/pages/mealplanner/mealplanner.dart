@@ -139,7 +139,7 @@ class _MealPlannerState extends State<MealPlanner> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       Text(
-                        "Meal Nutritions",
+                        "Today Meals",
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w900,
