@@ -105,8 +105,7 @@ class _ProfileBtnState extends State<ProfileBtn> {
                     child: const Center(
                       child: Text(
                         'Edit',
-                        style:
-                            TextStyle(fontFamily: 'lato', color: Colors.white),
+                        style: TextStyle(color: Colors.white),
                       ),
                     ),
                   ),

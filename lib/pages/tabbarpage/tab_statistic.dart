@@ -1,6 +1,5 @@
 import 'package:fitness/components/graph_modal.dart';
 import 'package:fitness/components/linear_charts.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
 
 import 'package:flutter/material.dart';
 

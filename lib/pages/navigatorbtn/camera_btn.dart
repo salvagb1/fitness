@@ -1,10 +1,14 @@
+import 'package:camera/camera.dart';
 import 'package:fitness/components/appbar.dart';
 import 'package:fitness/components/button.dart';
 import 'package:fitness/components/card_gallery.dart';
 import 'package:fitness/pages/comparison.dart';
+import 'package:fitness/pages/mealplanner/mealplanner.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
+import '../camera.dart';
 
 class CameraBtn extends StatefulWidget {
   const CameraBtn({Key? key}) : super(key: key);
@@ -14,6 +18,8 @@ class CameraBtn extends StatefulWidget {
 }
 
 class _CameraBtnState extends State<CameraBtn> {
+  var value;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +35,7 @@ class _CameraBtnState extends State<CameraBtn> {
             Container(
               padding: const EdgeInsets.all(18),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
+                borderRadius: BorderRadius.circular(20),
                 color: const Color(0xffFFD8D8),
               ),
               child: Row(
@@ -71,7 +77,7 @@ class _CameraBtnState extends State<CameraBtn> {
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
+                borderRadius: BorderRadius.circular(20),
                 boxShadow: const <BoxShadow>[
                   BoxShadow(
                     color: Color(0xffF7F8F8),
@@ -139,7 +145,7 @@ class _CameraBtnState extends State<CameraBtn> {
             Container(
               padding: const EdgeInsets.all(18),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
+                borderRadius: BorderRadius.circular(20),
                 boxShadow: const <BoxShadow>[
                   BoxShadow(
                     color: Color(0xffF7F8F8),
@@ -153,8 +159,10 @@ class _CameraBtnState extends State<CameraBtn> {
                   const Expanded(
                     child: Text(
                       "Compare my photo",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
                   ),
                   InkWell(
@@ -266,8 +274,24 @@ class _CameraBtnState extends State<CameraBtn> {
       floatingActionButton: FloatingActionButton(
         heroTag: 'btn 2',
         backgroundColor: const Color(0xffC58BF2),
-        onPressed: () => Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const ComparasionMonth())),
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const MealPlanner(),
+          ),
+        ),
+        // onPressed: () async {
+        //   await availableCameras().then(
+        //     (value) => Navigator.push(
+        //       context,
+        //       MaterialPageRoute(
+        //         builder: (context) => CameraPage(
+        //           cameras: value,
+        //         ),
+        //       ),
+        //     ),
+        //   );
+        // },
         child: SvgPicture.asset(
           'assets/icons/camera.svg',
           color: Colors.white,
