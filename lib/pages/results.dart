@@ -1,7 +1,9 @@
 import 'package:fitness/components/appbar.dart';
 import 'package:fitness/pages/tabbarpage/tab_photo.dart';
 import 'package:fitness/pages/tabbarpage/tab_statistic.dart';
+import 'package:fitness/pages/welcome_home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class ResultFitness extends StatefulWidget {
   const ResultFitness({Key? key}) : super(key: key);
@@ -69,7 +71,23 @@ class _ResultFitnessState extends State<ResultFitness>
           ),
         ), */
         appBar: AppBar(
-          title: const Text('Result'),
+          leading: IconButton(
+              onPressed: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const WelcomeHome())),
+              icon: SvgPicture.asset('assets/icons/backnavs.svg')),
+          title: const Text(
+            'Result',
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.w900,
+              fontSize: 20,
+            ),
+          ),
+          actions: [
+            IconButton(
+                onPressed: () {},
+                icon: SvgPicture.asset('assets/icons/detailnavs.svg'))
+          ],
           centerTitle: true,
           toolbarHeight: AppBar().preferredSize.height + 40,
           bottom: PreferredSize(
@@ -109,7 +127,7 @@ class _ResultFitnessState extends State<ResultFitness>
           controller: _tabController,
           children: [
             TabPhoto(),
-            TabStatistic(),
+            const TabStatistic(),
           ],
         ),
       ),

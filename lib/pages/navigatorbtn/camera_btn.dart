@@ -30,27 +30,38 @@ class _CameraBtnState extends State<CameraBtn> {
               padding: const EdgeInsets.all(18),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
-                boxShadow: const <BoxShadow>[
-                  BoxShadow(
-                    color: Color(0xffF7F8F8),
-                    blurRadius: 10.0,
-                  ),
-                ],
-                color: const Color(0xffFFC2C2),
+                color: const Color(0xffFFD8D8),
               ),
               child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Expanded(
-                    child: Text(
-                      "Compare my photo",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+                  Image.asset('assets/images/alert1.png'),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: const [
+                        Text(
+                          "Reminder!",
+                          style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w400,
+                              color: Color(0xffFF0000)),
+                        ),
+                        Text(
+                          "Next Photos Fall On July 08",
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  InkWell(
-                    onTap: () {},
-                    child: const ButtonReu(textbu: 'Compare'),
-                  ),
+                  SvgPicture.asset('assets/icons/xsalir.svg')
                 ],
               ),
             ),

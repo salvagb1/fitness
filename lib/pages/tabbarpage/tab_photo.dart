@@ -49,11 +49,14 @@ class _TabPhotoState extends State<TabPhoto> {
               children: [
                 Container(
                   width: fullWidth * 0.62,
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
                       colors: [Color(0xff92A3FD), Color(0xffC58BF2)],
                     ),
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30),
+                      bottomLeft: Radius.circular(30),
+                    ),
                   ),
                   alignment: Alignment.center,
                   child: const Text(

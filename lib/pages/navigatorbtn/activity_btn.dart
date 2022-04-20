@@ -30,7 +30,7 @@ class _ActivityBtnState extends State<ActivityBtn> {
           style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.w900,
-            fontSize: 23,
+            fontSize: 20,
           ),
         ),
         actions: [
