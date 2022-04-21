@@ -560,14 +560,51 @@ class _HomeBtnState extends State<HomeBtn> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text(
-                          "Salmon Niguiri",
+                          "Fullbody Workout",
                           style: TextStyle(fontWeight: FontWeight.w700),
                         ),
                         SizedBox(
                           height: 10,
                         ),
                         Text(
-                          'Today 7am',
+                          '180 Calories Burn | 20minutes',
+                          style: TextStyle(
+                            color: Color(0xff7B6F72),
+                            fontSize: 14,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        GraphModal2(),
+                      ],
+                    ),
+                  ),
+                  Image.asset('assets/images/Workout-Btn.png'),
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  Image.asset('assets/images/workout2.png'),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          "Lowerbody Workout",
+                          style: TextStyle(fontWeight: FontWeight.w700),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          '200 Calories Burn | 30minutes',
                           style: TextStyle(
                             color: Color(0xff7B6F72),
                             fontSize: 14,
