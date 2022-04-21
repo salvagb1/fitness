@@ -1,4 +1,5 @@
 import 'package:fitness/components/card_category.dart';
+import 'package:fitness/pages/mealplanner/breakfast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -149,7 +150,11 @@ class _MealPlannerState extends State<MealPlanner> {
                   ),
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => BreakFast(),
+                      )),
                   child: Container(
                     margin: const EdgeInsets.only(),
                     height: 30,

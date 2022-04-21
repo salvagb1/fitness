@@ -1,4 +1,3 @@
-import 'package:fitness/components/appbar.dart';
 import 'package:fitness/pages/tabbarpage/tab_photo.dart';
 import 'package:fitness/pages/tabbarpage/tab_statistic.dart';
 import 'package:fitness/pages/welcome_home.dart';
